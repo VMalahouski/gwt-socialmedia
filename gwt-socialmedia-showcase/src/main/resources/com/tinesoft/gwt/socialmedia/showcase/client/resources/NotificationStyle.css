@@ -1,0 +1,60 @@
+@def tip-width 400px;
+@def tip-width-half -200px;
+
+.notification {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px 5px;
+	position: absolute;
+	z-index: 9999;
+	margin: 0;
+	padding: 1em;
+	overflow: visible;
+	text-align: center;
+	cursor: pointer;
+}
+
+.notification-default {
+	color: #ffffff;
+	background: #c8ccd0;
+	font-size: 105%;
+	font-weight: bold;
+	top: 40%;
+	left: 50%;
+	width: tip-width;
+	margin-left: tip-width-half;
+}
+
+.notification-error {
+	color: #ffffff;
+	background: #ff0000;
+	font-size: 105%;
+	font-weight: bold;
+	top: 40%;
+	left: 50%;
+	width: tip-width;
+	margin-left: tip-width-half;
+}
+
+.notification-warn {
+	color: #ff8000;
+	background: #f9db06;
+	font-size: 105%;
+	font-weight: bold;
+	top: 40%;
+	left: 50%;
+	width: tip-width;
+	margin-left: tip-width-half;
+}
+
+.notification-tray {
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px 1px;
+	margin: 0;
+	color: #ffffff;
+	background: #c8ccd0;
+	bottom: 15px;
+	right: 15px;
+	width: 350px;
+}

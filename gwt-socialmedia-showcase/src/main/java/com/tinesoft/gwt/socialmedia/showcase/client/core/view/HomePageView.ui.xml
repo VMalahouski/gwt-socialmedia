@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:sm='urn:import:com.tinesoft.gwt.socialmedia.client.ui'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with
+		type="com.tinesoft.gwt.socialmedia.showcase.client.resources.ShowcaseResources"
+		field="res" />
+
+	<g:FlowPanel>
+		<g:HTMLPanel>
+			<h1>GWT Social Media Showcase</h1>
+		</g:HTMLPanel>
+
+		<g:FlowPanel addStyleNames="{res.css.clear} {res.css.notSelectable}">
+			
+			<g:HTMLPanel addStyleNames="{res.css.container} {res.css.left}">
+				<h2>Google +</h2>
+				<sm:GooglePlusOneButtonTag ui:field="plusOneButtonTag" />
+				<sm:GoogleShareButtonTag ui:field="shareButtonTag" />
+			</g:HTMLPanel>
+
+			<g:HTMLPanel addStyleNames="{res.css.container} {res.css.left}">
+				<h2>Twitter</h2>
+				<sm:TwitterShareButtonTag ui:field="twitterShareButtonTag" />
+				<sm:TwitterFollowButtonTag ui:field="twitterFollowButtonTag" />
+			</g:HTMLPanel>
+			
+			<g:FlowPanel styleName="{res.css.clear}" />
+			
+			<g:HTMLPanel addStyleNames="{res.css.container} {res.css.left}">
+				<h2>LinkedIn</h2>
+				<sm:LinkedInShareButtonTag ui:field="linkedInShareButtonTag" />
+				<sm:LinkedInFollowButtonTag ui:field="linkedInFollowButtonTag" />
+				<sm:LinkedInRecommendButtonTag ui:field="linkedInRecommendButtonTag" />				
+			</g:HTMLPanel>
+			
+			<g:HTMLPanel addStyleNames="{res.css.container} {res.css.left}">
+				<h2>Facebook</h2>
+				<sm:FacebookLikeButtonTag ui:field="fbLikeButtonTag" />
+			</g:HTMLPanel>
+
+		</g:FlowPanel>
+	</g:FlowPanel>
+</ui:UiBinder>
