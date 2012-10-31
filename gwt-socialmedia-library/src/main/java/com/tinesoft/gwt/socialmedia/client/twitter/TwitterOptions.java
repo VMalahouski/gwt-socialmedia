@@ -2,7 +2,7 @@
 package com.tinesoft.gwt.socialmedia.client.twitter;
 
 /**
- * Class defining the common options for Tweeter buttons, badges, and 'share' buttons.
+ * Class defining the common options for Twitter buttons, badges, and 'share' buttons.
  * 
  * @author Tine Kondo<kondotine@gmail.com>
  * @version $Id$
@@ -10,7 +10,7 @@ package com.tinesoft.gwt.socialmedia.client.twitter;
 public class TwitterOptions {
 
     /**
-     * Defines the languages supported by the Tweeter buttons.
+     * Defines the languages supported by the Twitter buttons.
      * 
      * @author Tine Kondo<kondotine@gmail.com>
      * @version $Id$

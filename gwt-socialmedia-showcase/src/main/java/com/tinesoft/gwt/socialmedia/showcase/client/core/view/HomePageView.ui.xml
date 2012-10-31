@@ -38,6 +38,15 @@
 			</g:HTMLPanel>
 			
 			<g:HTMLPanel addStyleNames="{res.css.container} {res.css.left}">
+				<h2>Viadeo</h2>
+				<sm:ViadeoShareButtonTag ui:field="viadeoShareButtonTag" />
+				<sm:ViadeoSendButtonTag ui:field="viadeoSendButtonTag" />
+			</g:HTMLPanel>
+			
+			<g:FlowPanel styleName="{res.css.clear}" />
+			
+			
+			<g:HTMLPanel addStyleNames="{res.css.container} {res.css.left}">
 				<h2>Facebook</h2>
 				<sm:FacebookLikeButtonTag ui:field="fbLikeButtonTag" />
 			</g:HTMLPanel>

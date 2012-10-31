@@ -14,6 +14,8 @@ import com.tinesoft.gwt.socialmedia.client.ui.LinkedInRecommendButtonTag;
 import com.tinesoft.gwt.socialmedia.client.ui.LinkedInShareButtonTag;
 import com.tinesoft.gwt.socialmedia.client.ui.TwitterFollowButtonTag;
 import com.tinesoft.gwt.socialmedia.client.ui.TwitterShareButtonTag;
+import com.tinesoft.gwt.socialmedia.client.ui.ViadeoSendButtonTag;
+import com.tinesoft.gwt.socialmedia.client.ui.ViadeoShareButtonTag;
 import com.tinesoft.gwt.socialmedia.showcase.client.core.handler.HomePageUiHandlers;
 import com.tinesoft.gwt.socialmedia.showcase.client.core.presenter.HomePagePresenter;
 import com.tinesoft.gwt.socialmedia.showcase.client.resources.ShowcaseResources;
@@ -24,6 +26,9 @@ import com.tinesoft.gwt.socialmedia.showcase.client.resources.ShowcaseResources;
  * @author Tine Kondo<kondotine@gmail.com>
  */
 public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> implements HomePagePresenter.MyView {
+
+    public interface Binder extends UiBinder<Widget, HomePageView> {
+    }
 
     private final Widget widget;
 
@@ -53,11 +58,14 @@ public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> impleme
     @UiField(provided = true)
     LinkedInRecommendButtonTag linkedInRecommendButtonTag;
 
-    public interface Binder extends UiBinder<Widget, HomePageView> {
-    }
+    @UiField(provided = true)
+    ViadeoShareButtonTag viadeoShareButtonTag;
+
+    @UiField(provided = true)
+    ViadeoSendButtonTag viadeoSendButtonTag;
 
     @Inject
-    public HomePageView(final Binder binder, final ShowcaseResources resources, final GooglePlusOneButtonTag plusOneButtonTag, final GoogleShareButtonTag shareButtonTag, final FacebookLikeButtonTag fbLikeButtonTag, final TwitterShareButtonTag twitterShareButtonTag, final TwitterFollowButtonTag twitterFollowButtonTag, final LinkedInShareButtonTag linkedInShareButtonTag, final LinkedInFollowButtonTag linkedInFollowButtonTag, final LinkedInRecommendButtonTag linkedInRecommendButtonTag) {
+    public HomePageView(final Binder binder, final ShowcaseResources resources, final ViadeoSendButtonTag viadeoSendButtonTag, final ViadeoShareButtonTag viadeoShareButtonTag, final GooglePlusOneButtonTag plusOneButtonTag, final GoogleShareButtonTag shareButtonTag, final FacebookLikeButtonTag fbLikeButtonTag, final TwitterShareButtonTag twitterShareButtonTag, final TwitterFollowButtonTag twitterFollowButtonTag, final LinkedInShareButtonTag linkedInShareButtonTag, final LinkedInFollowButtonTag linkedInFollowButtonTag, final LinkedInRecommendButtonTag linkedInRecommendButtonTag) {
         this.plusOneButtonTag = plusOneButtonTag;
         this.shareButtonTag = shareButtonTag;
         this.fbLikeButtonTag = fbLikeButtonTag;
@@ -66,6 +74,8 @@ public class HomePageView extends ViewWithUiHandlers<HomePageUiHandlers> impleme
         this.linkedInShareButtonTag = linkedInShareButtonTag;
         this.linkedInFollowButtonTag = linkedInFollowButtonTag;
         this.linkedInRecommendButtonTag = linkedInRecommendButtonTag;
+        this.viadeoShareButtonTag = viadeoShareButtonTag;
+        this.viadeoSendButtonTag = viadeoSendButtonTag;
 
         widget = binder.createAndBindUi(this);
         res = resources;

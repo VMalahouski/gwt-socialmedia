@@ -51,7 +51,6 @@ public class TwitterShareButtonImpl implements TwitterShareButton {
         final ScriptElement scriptElement = Document.get().createScriptElement(scriptStr);
 
         // we place the script just after the body tag
-
         bodyElement.appendChild(scriptElement);
 
     }
